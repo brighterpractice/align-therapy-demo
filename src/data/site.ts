@@ -1,10 +1,10 @@
 export const practice = {
- name: 'Evergreen Counseling Collective',
- shortName: 'Evergreen Counseling',
- city: 'Fort Collins',
- state: 'Colorado',
- stateAbbreviation: 'CO',
- address: 'Fort Collins, Colorado',
+ name: 'Align Therapy Group',
+ shortName: 'Align Therapy',
+ city: 'Madison',
+ state: 'Wisconsin',
+ stateAbbreviation: 'WI',
+ address: 'Madison, Wisconsin',
  phone: '(970) 555-0148',
  email: 'hello@example.com',
 };
@@ -18,10 +18,10 @@ export const externalLinkAttrs = () => ({
 });
 
 export const site = {
- publicUrl: 'https://evergreen-counseling-demo.example',
+ publicUrl: 'https://align-therapy-demo.example',
  practice,
  clinician: {
- name: 'Maya Bennett',
+ name: 'Jordan Ellis',
  credentials: 'LPC',
  title: 'Licensed Professional Counselor',
  },

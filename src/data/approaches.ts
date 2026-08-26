@@ -21,7 +21,7 @@ export const approaches: Approach[] = [
  title: 'Trauma Therapy',
  shortTitle: '',
  description:
- 'Learn about trauma therapy with Maya Bennett, LPC, an in Fort Collins, Colorado.',
+ 'Learn about trauma therapy with Jordan Ellis, LPC, in Madison, Wisconsin.',
  cardDescription:
  'A structured approach that may help some clients work with distressing experiences and the responses connected with them.',
  hero:
@@ -29,7 +29,7 @@ export const approaches: Approach[] = [
  whatItIsTitle: 'A structured way of working with distressing experiences.',
  whatItIs: [
  ' stands for Eye Movement Desensitization and Reprocessing. It is a structured therapy approach that can include bilateral stimulation, such as guided eye movements or alternating taps, while working with distressing experiences and related thoughts, emotions, or body responses.',
- 'Maya is an . Whether is used depends on the concern being addressed, readiness for the work, current circumstances, and what feels manageable.',
+ 'Jordan is an . Whether is used depends on the concern being addressed, readiness for the work, current circumstances, and what feels manageable.',
  ],
  sessionTitle: 'Preparation and pacing are part of the work.',
  session: [
@@ -44,18 +44,18 @@ export const approaches: Approach[] = [
  ],
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
- { label: 'About Maya', href: '/about/maya-bennett/' },
+ { label: 'About Jordan', href: '/about/jordan-ellis/' },
  ],
  },
 
  {
  slug: 'internal-family-systems',
  title: 'Internal Family Systems (IFS)',
- seoTitle: 'IFS Therapy | Fort Collins, CO',
+ seoTitle: 'IFS Therapy | Madison, WI',
  shortTitle: 'IFS',
  href: '/approaches/internal-family-systems/',
  description:
- 'Learn how Maya Bennett may incorporate Internal Family Systems concepts into individual counseling in Fort Collins, Colorado.',
+ 'Learn how Jordan Ellis may incorporate Internal Family Systems concepts into individual counseling in Madison, Wisconsin.',
  cardDescription:
  'A framework for noticing different internal parts and protective patterns with curiosity rather than judgment.',
  hero:
@@ -67,14 +67,14 @@ export const approaches: Approach[] = [
  ],
  sessionTitle: 'The work can begin with noticing what is happening now.',
  session: [
- 'Maya may help clients notice thoughts, emotions, physical cues, or internal reactions that seem to pull in different directions and explore what those responses may be trying to accomplish.',
+ 'Jordan may help clients notice thoughts, emotions, physical cues, or internal reactions that seem to pull in different directions and explore what those responses may be trying to accomplish.',
  'The work may involve understanding protective patterns and developing a less adversarial relationship with reactions that have felt frustrating, confusing, or difficult to change.',
  ],
  considerationsTitle: 'IFS is one framework among several.',
  considerations: [
  'Clients do not need to use IFS terminology for the work to be useful.',
  'The approach can be adapted to the individual and the focus of counseling.',
- 'Maya may combine IFS concepts with other approaches when that better fits the client.',
+ 'Jordan may combine IFS concepts with other approaches when that better fits the client.',
  ],
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
@@ -86,11 +86,11 @@ export const approaches: Approach[] = [
  {
  slug: 'somatic-experiencing',
  title: 'Somatic Experiencing & Body-Informed Therapy',
- seoTitle: 'Somatic Experiencing Therapy | Fort Collins, CO',
+ seoTitle: 'Somatic Experiencing Therapy | Madison, WI',
  shortTitle: 'Somatic Experiencing',
  href: '/approaches/somatic-experiencing/',
  description:
- 'Learn how Maya Bennett may incorporate Somatic Experiencing and body-informed approaches into individual counseling in Fort Collins, Colorado.',
+ 'Learn how Jordan Ellis may incorporate Somatic Experiencing and body-informed approaches into individual counseling in Madison, Wisconsin.',
  cardDescription:
  'An approach that includes attention to physical sensations and body responses alongside thoughts and emotions.',
  hero:
@@ -98,11 +98,11 @@ export const approaches: Approach[] = [
  whatItIsTitle: 'Emotional experiences can also have a physical dimension.',
  whatItIs: [
  'Stress, emotion, and difficult experiences can show up physically through tension, breathing changes, restlessness, numbness, tightness, changes in energy, or other body sensations.',
- 'Maya may incorporate Somatic Experiencing and other body-informed practices to notice these responses, understand what seems to activate or settle them, and include the body as one source of information during counseling.',
+ 'Jordan may incorporate Somatic Experiencing and other body-informed practices to notice these responses, understand what seems to activate or settle them, and include the body as one source of information during counseling.',
  ],
  sessionTitle: 'Body awareness is introduced gently.',
  session: [
- 'When it is useful, Maya may invite attention to physical sensations, movement, breathing, posture, or changes in the body while discussing an experience.',
+ 'When it is useful, Jordan may invite attention to physical sensations, movement, breathing, posture, or changes in the body while discussing an experience.',
  'Clients remain in control of the pace. Attention to body sensations can be brief, adjusted, or set aside when it does not feel useful.',
  ],
  considerationsTitle: 'The body is one source of information.',
@@ -114,18 +114,18 @@ export const approaches: Approach[] = [
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
  { label: 'Anxiety & Stress', href: '/services/anxiety-stress/' },
- { label: 'About Maya', href: '/about/maya-bennett/' },
+ { label: 'About Jordan', href: '/about/jordan-ellis/' },
  ],
  },
 
  {
  slug: 'emotionally-focused-therapy',
  title: 'Emotionally Focused Therapy (EFT) for Individuals',
- seoTitle: 'EFT for Individuals in Fort Collins, CO',
+ seoTitle: 'EFT for Individuals in Madison, WI',
  shortTitle: 'EFT',
  href: '/approaches/emotionally-focused-therapy/',
  description:
- 'Learn how Maya Bennett may use Emotionally Focused Therapy principles in individual counseling for adults in Fort Collins, Colorado.',
+ 'Learn how Jordan Ellis may use Emotionally Focused Therapy principles in individual counseling for adults in Madison, Wisconsin.',
  cardDescription:
  'An emotion- and attachment-focused approach for understanding patterns that can affect connection and relationships.',
  hero:
@@ -133,11 +133,11 @@ export const approaches: Approach[] = [
  whatItIsTitle: 'Emotions can provide useful information about connection and protection.',
  whatItIs: [
  'Emotionally Focused Therapy, or EFT, pays close attention to emotional experience and patterns involving closeness, safety, conflict, vulnerability, attachment, and connection.',
- 'At Evergreen Counseling Collective, Maya uses these concepts within individual counseling. Evergreen Counseling Collective is not offering couples therapy through this service.',
+ 'At Align Therapy Group, Jordan uses these concepts within individual counseling. Align Therapy Group is not offering couples therapy through this service.',
  ],
  sessionTitle: 'The work may explore patterns beneath the surface.',
  session: [
- 'Maya may help clients notice recurring emotional responses in relationships, identify needs beneath those reactions, and understand what happens when connection feels uncertain, unsafe, or difficult.',
+ 'Jordan may help clients notice recurring emotional responses in relationships, identify needs beneath those reactions, and understand what happens when connection feels uncertain, unsafe, or difficult.',
  'The work may include present relationships as well as earlier experiences that influenced expectations about closeness, trust, conflict, or emotional safety.',
  ],
  considerationsTitle: 'EFT principles can be integrated with individual therapy.',
@@ -149,18 +149,18 @@ export const approaches: Approach[] = [
  related: [
  { label: 'Relationship Concerns', href: '/services/relationship-concerns/' },
  { label: 'Individual Therapy', href: '/services/individual-therapy/' },
- { label: 'About Maya', href: '/about/maya-bennett/' },
+ { label: 'About Jordan', href: '/about/jordan-ellis/' },
  ],
  },
 
  {
  slug: 'mindfulness-based-therapy',
  title: 'Mindfulness-Informed Therapy',
- seoTitle: 'Mindfulness-Informed Therapy | Fort Collins, CO',
+ seoTitle: 'Mindfulness-Informed Therapy | Madison, WI',
  shortTitle: 'Mindfulness',
  href: '/approaches/mindfulness-based-therapy/',
  description:
- 'Learn how Maya Bennett may incorporate mindfulness, meditation experience, and body awareness into individual counseling in Fort Collins, Colorado.',
+ 'Learn how Jordan Ellis may incorporate mindfulness, meditation experience, and body awareness into individual counseling in Madison, Wisconsin.',
  cardDescription:
  'Present-moment awareness practices that can support noticing thoughts, emotions, and body cues with greater clarity.',
  hero:

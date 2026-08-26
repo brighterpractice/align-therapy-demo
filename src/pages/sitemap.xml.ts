@@ -4,7 +4,7 @@ import { site as siteConfig } from '../data/site';
 const routes = [
   '/',
   '/about/',
-  '/about/maya-bennett/',
+  '/about/jordan-ellis/',
   '/services/',
   '/services/individual-therapy/',
   '/services/trauma-ptsd/',

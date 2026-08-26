@@ -3,8 +3,8 @@ export const navigation = [
     label: 'About',
     href: '/about/',
     children: [
-      { label: 'About Evergreen', href: '/about/' },
-      { label: 'Meet Maya Bennett, LPC', href: '/about/maya-bennett/' },
+      { label: 'About Align', href: '/about/' },
+      { label: 'Meet Jordan Ellis, LPC', href: '/about/jordan-ellis/' },
     ],
   },
   {
