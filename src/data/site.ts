@@ -18,7 +18,7 @@ export const externalLinkAttrs = () => ({
 });
 
 export const site = {
- publicUrl: 'https://align-therapy-demo.example',
+ publicUrl: 'https://align.brightersites.app',
  practice,
  clinician: {
  name: 'Jordan Ellis',
