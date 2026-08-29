@@ -137,3 +137,16 @@ footer hr,
 .visual-circle {
   display: none !important;
 }
+
+
+/* Align's structured desktop shell intentionally differs from the
+   horizontal navigation used by the other Brighter Sites demos. */
+@media (min-width:64rem) {
+  body {
+    padding-left: 18rem;
+  }
+
+  .skip-link {
+    left: 18.75rem;
+  }
+}
