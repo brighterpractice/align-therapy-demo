@@ -12,15 +12,12 @@ export const navigation = [
     href: '/services/',
     children: [
       { label: 'Services Overview', href: '/services/' },
-      { label: 'Individual Therapy', href: '/services/individual-therapy/' },
       { label: 'Trauma & Difficult Experiences', href: '/services/trauma-ptsd/' },
       { label: 'Anxiety & Stress', href: '/services/anxiety-stress/' },
-      { label: 'Grief & Loss', href: '/services/grief-loss/' },
       {
         label: 'Depression & Emotional Disconnection',
         href: '/services/depression-emotional-disconnection/',
       },
-      { label: 'Life Transitions', href: '/services/life-transitions/' },
       { label: 'Relationship Concerns', href: '/services/relationship-concerns/' },
     ],
   },
