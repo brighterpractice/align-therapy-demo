@@ -1,12 +1,6 @@
 ---
 import ApproachPage from '../../components/ApproachPage.astro';
-import { approaches, type Approach } from '../../data/approaches';
-
-const detailApproachSlugs = new Set([
-  'internal-family-systems',
-  'somatic-experiencing',
-]);
-
+import { approaches, detailApproachSlugs, type Approach } from '../../data/approaches';
 export function getStaticPaths() {
   return approaches
     .filter((approach) =>

@@ -188,3 +188,8 @@ export const approaches: Approach[] = [
  ],
  },
 ];
+
+export const detailApproachSlugs = new Set([
+  'internal-family-systems',
+  'somatic-experiencing',
+]);
