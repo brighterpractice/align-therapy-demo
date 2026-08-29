@@ -1,191 +1,230 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
-import { approaches } from '../../data/approaches';
+import { approaches, detailApproachSlugs } from '../../data/approaches';
 import { breadcrumbSchema, pageSchema } from '../../lib/schema';
 
 const crumbs = [{ label: 'Approaches' }];
-const detailApproachSlugs = new Set([
-  'internal-family-systems',
-  'somatic-experiencing',
-]);
-const validApproaches = approaches.filter(
-  (approach) => typeof approach.slug === 'string' && approach.slug.length > 0
-);
-const detailApproaches = validApproaches.filter((approach) =>
+const detailApproaches = approaches.filter((approach) =>
   detailApproachSlugs.has(approach.slug)
 );
-const overviewApproaches = validApproaches.filter(
+const overviewApproaches = approaches.filter(
   (approach) => !detailApproachSlugs.has(approach.slug)
 );
 ---
 
 <Layout
- title="Therapy Approaches in Madison, Wisconsin"
- description="Explore therapy approaches Jordan Ellis may use in individual counseling, including IFS, Somatic Experiencing, EFT, and mindfulness."
- schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
+  title="Therapy Approaches in Madison, Wisconsin"
+  description="A practical map of the therapy approaches Jordan Ellis may use, including IFS, Somatic Experiencing, attachment-focused work, and present-moment awareness."
+  schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}
 >
- <PageHero
- eyebrow="How therapy may take shape"
- title="Therapy approaches Jordan may draw from."
- intro="Different approaches offer different ways to understand experiences, emotions, patterns, and responses. Some methods are explored in more depth, while others are summarized here."
- crumbs={crumbs}
- />
+  <PageHero
+    eyebrow="Method map"
+    title="The method should clarify the work—not complicate it."
+    intro="Jordan may use different frameworks to understand different parts of an experience. You can ask what a method means, why it is being considered, and what alternatives exist."
+    crumbs={crumbs}
+  />
 
- <section class="section">
- <div class="container grid grid--2">
- <div>
- <p class="eyebrow">Understanding the difference</p>
- <h2>Services describe what may bring you in. Approaches describe ways of working.</h2>
- </div>
+  <section class="method-index">
+    <div class="container index-grid">
+      <div class="index-code">
+        <span>01</span>
+        <p>Detailed method notes</p>
+      </div>
 
- <div>
- <p>
- A concern such as anxiety, grief, trauma, or relationship difficulty
- does not automatically determine one type of therapy. More than one
- approach may be useful at different points in counseling.
- </p>
+      <div class="featured-methods">
+        {
+          detailApproaches.map((approach, index) => (
+            <a href={approach.href}>
+              <div>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <p>DETAILED NOTE</p>
+              </div>
+              <h2>{approach.title}</h2>
+              <p>{approach.cardDescription}</p>
+              <b>Open method note ↗</b>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
- <p>
- Learning about these methods can help you understand what the work may
- involve and give you language for asking questions about what feels
- useful or comfortable.
- </p>
- </div>
- </div>
- </section>
+  <section class="other-methods" id="other-methods">
+    <div class="container other-grid">
+      <div>
+        <p class="eyebrow">Integrated as useful</p>
+        <h2>Other ways Jordan may organize the conversation.</h2>
+      </div>
 
- <section class="section section--tint">
- <div class="container">
- <p class="eyebrow">Explore in greater depth</p>
- <h2>Two approaches Jordan may use regularly.</h2>
+      <div class="other-list">
+        {
+          overviewApproaches.map((approach, index) => (
+            <article>
+              <span>{String(index + 3).padStart(2, '0')}</span>
+              <div>
+                <h3>{approach.title}</h3>
+                <p>{approach.cardDescription}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
- <div class="approach-grid">
- {
- detailApproaches.map((approach) => (
- <a
- class="card service-link"
- href={approach.href}
- data-track={`approach-${approach.slug}`}
- >
- <span class="detail-label">Learn more</span>
- <h3>{approach.title}</h3>
- <p>{approach.cardDescription}</p>
- <span class="learn">Explore this approach →</span>
- </a>
- ))
- }
- </div>
- </div>
- </section>
+  <section class="method-principle">
+    <div class="container principle-grid">
+      <div>
+        <p class="eyebrow">One operating principle</p>
+        <h2>The framework serves the person.</h2>
+      </div>
 
- <section class="section" id="other-methods">
- <div class="container">
- <p class="eyebrow">Additional methods</p>
- <h2>Other approaches can still be part of the work.</h2>
- <p class="measure methods-intro">
- Jordan may also draw from these methods depending on the concern being
- discussed, your preferences, and what seems useful as therapy develops.
- </p>
-
- <div class="approach-grid secondary-grid">
- {
- overviewApproaches.map((approach) => (
- <article class="card overview-card">
- <h3>{approach.title}</h3>
- <p>{approach.cardDescription}</p>
- </article>
- ))
- }
- </div>
- </div>
- </section>
-
- <section class="section section--tint">
- <div class="container grid grid--2">
- <div>
- <p class="eyebrow">Choosing an approach</p>
- <h2>The method is only one part of therapy.</h2>
- </div>
-
- <div>
- <p>
- Jordan considers the concern being discussed, how a client responds to
- the work, personal preferences, readiness, and what seems useful as
- counseling develops.
- </p>
-
- <p>
- You can also say when something does not make sense or does not feel
- like a good fit. Therapy can be adjusted as the work continues.
- </p>
-
- <div class="overview-links">
- <a class="link-arrow" href="/services/">
- Explore areas of support
- </a>
-
- <a class="link-arrow" href="/about/jordan-ellis/">
- Learn more about Jordan
- </a>
- </div>
- </div>
- </div>
- </section>
+      <div>
+        <p>
+          A therapy method is not a personality test or a predetermined route.
+          The approach can change as the concern becomes clearer, and you can
+          say when language, pacing, or an exercise does not fit.
+        </p>
+        <a href="/about/jordan-ellis/">Read how Jordan works →</a>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
- .approach-grid{
- display:grid;
- gap:.75rem;
- margin-top:2rem
- }
+  .method-index,
+  .other-methods,
+  .method-principle {
+    padding: clamp(4rem,8vw,7rem) 0;
+  }
 
- .approach-grid a{
- display:block;
- text-decoration:none
- }
+  .index-grid,
+  .other-grid,
+  .principle-grid {
+    display: grid;
+    gap: 2.5rem;
+  }
 
- .approach-grid h3{
- margin-bottom:.6rem
- }
+  .index-code {
+    align-self: start;
+    padding-top: .75rem;
+    border-top: 3px solid #5f82ad;
+  }
 
- .learn{
- display:inline-block;
- margin-top:.5rem;
- color:var(--sage-dark);
- font-size:.9rem;
- font-weight:750
- }
+  .index-code span {
+    color: #5f82ad;
+    font-size: 2.4rem;
+    font-weight: 800;
+  }
 
- .detail-label{
- display:block;
- margin-bottom:.55rem;
- color:var(--sage-dark);
- font-size:.68rem;
- font-weight:800;
- letter-spacing:.08em;
- text-transform:uppercase
- }
+  .index-code p {
+    color: var(--muted);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
 
- .methods-intro{margin-top:1rem}
- .overview-card{padding:1.25rem}
+  .featured-methods {
+    display: grid;
+    gap: 1rem;
+  }
 
- .overview-links{
- display:grid;
- gap:.5rem;
- margin-top:1.25rem
- }
+  .featured-methods a {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--sand);
+    background: white;
+    color: var(--body);
+    text-decoration: none;
+  }
 
- @media(min-width:48rem){
- .approach-grid{
- grid-template-columns:repeat(2,1fr)
- }
- }
+  .featured-methods a:hover {
+    border-color: #5f82ad;
+    box-shadow: 0 16px 40px rgba(11,29,58,.09);
+  }
 
- @media(min-width:64rem){
- .approach-grid{
- grid-template-columns:repeat(2,1fr)
- }
- }
+  .featured-methods a > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #5f82ad;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+  }
+
+  .featured-methods h2 {
+    margin: 1.5rem 0 0;
+  }
+
+  .featured-methods b {
+    color: #3f648d;
+    font-size: .82rem;
+  }
+
+  .other-methods {
+    background: #edf4fb;
+  }
+
+  .other-list {
+    display: grid;
+    border-top: 1px solid #bfcfe0;
+  }
+
+  .other-list article {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #bfcfe0;
+  }
+
+  .other-list span {
+    color: #5f82ad;
+    font-size: .7rem;
+    font-weight: 800;
+  }
+
+  .other-list h3 {
+    margin-bottom: .35rem;
+  }
+
+  .method-principle {
+    background: #0b1d3a;
+    color: #dbe7f3;
+  }
+
+  .method-principle h2 {
+    color: white;
+  }
+
+  .method-principle .eyebrow {
+    color: #b5c8df;
+  }
+
+  .method-principle a {
+    color: white;
+    font-weight: 750;
+    text-decoration: none;
+  }
+
+  @media (min-width:48rem) {
+    .index-grid {
+      grid-template-columns: 12rem minmax(0,1fr);
+      gap: clamp(3rem,7vw,8rem);
+    }
+
+    .featured-methods {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .other-grid,
+    .principle-grid {
+      grid-template-columns: .8fr 1.2fr;
+      gap: clamp(3rem,7vw,7rem);
+    }
+  }
 </style>

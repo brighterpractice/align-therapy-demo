@@ -336,6 +336,12 @@ const isCurrent = (href: string) =>
       font-size: .88rem;
       font-weight: 800;
       text-decoration: none;
+      transition:
+        background-color .18s ease,
+        border-color .18s ease,
+        color .18s ease,
+        box-shadow .18s ease,
+        transform .18s ease;
     }
 
     .rail-home > span,
@@ -350,9 +356,11 @@ const isCurrent = (href: string) =>
     .rail-parent:hover,
     .rail-home.active,
     .rail-group.active > .rail-parent {
-      border-left-color: var(--clay);
-      background: rgba(255,255,255,.72);
-      color: var(--moss);
+      border-left-color: #3f648d;
+      background: #dce9f7;
+      color: #173b63;
+      box-shadow: 0 8px 18px rgba(11,29,58,.08);
+      transform: translateX(3px);
     }
 
     .rail-group {
@@ -369,14 +377,21 @@ const isCurrent = (href: string) =>
       padding: .32rem 0;
       color: var(--muted);
       font-size: .74rem;
+      border-radius: .35rem;
       font-weight: 600;
       line-height: 1.35;
       text-decoration: none;
+      transition:
+        background-color .18s ease,
+        color .18s ease,
+        padding .18s ease;
     }
 
     .rail-children a:hover,
     .rail-children a[aria-current="page"] {
-      color: var(--clay-text);
+      padding-left: .5rem;
+      background: #dce9f7;
+      color: #173b63;
     }
 
     .rail-actions {

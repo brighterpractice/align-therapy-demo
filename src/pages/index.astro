@@ -12,115 +12,72 @@ import {
 
 <Layout
   title="Align Therapy Group | Therapy in Madison, Wisconsin"
-  description="Individual counseling in Madison, Wisconsin for adults navigating anxiety, burnout, relationship patterns, grief, major transitions, and difficult life experiences."
+  description="Focused individual therapy in Madison, Wisconsin for adults navigating anxiety, trauma responses, disconnection, and relationship patterns."
   schema={pageSchema([organizationSchema(), websiteSchema()])}
 >
-  <section class="align-hero">
-    <div class="container align-hero-grid">
-      <div class="align-hero-copy">
-        <p class="eyebrow">Align Therapy Group · Madison, Wisconsin</p>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-code" aria-hidden="true">
+        <span>ALIGN / MADISON</span>
+        <strong>01</strong>
+      </div>
 
+      <div class="hero-copy">
+        <p class="eyebrow">Individual therapy for adults</p>
         <h1>
-          Therapy for when life feels
-          <span>out of alignment.</span>
+          When your inner life and outer life
+          <span>no longer match.</span>
         </h1>
 
-        <p class="align-lead">
-          Individual counseling for adults who want space to understand what is
-          happening, reconnect with what matters, and move forward with greater
-          clarity.
+        <p class="lead">
+          Align Therapy Group offers focused, collaborative counseling for
+          adults who want to understand what keeps repeating—and respond with
+          greater choice.
         </p>
 
-        <div class="align-actions">
+        <div class="hero-actions">
           <Button href={appointmentUrl} tracking="request-appointment">
             Request an appointment
           </Button>
 
-          <a class="align-secondary" href="/services/">
-            Explore services
-          </a>
+          <a href="/about/jordan-ellis/">Meet Jordan Ellis, LPC →</a>
         </div>
       </div>
 
-      <div class="align-art" aria-hidden="true">
-        <div class="shape shape-a"></div>
-        <div class="shape shape-b"></div>
-        <div class="shape shape-c"></div>
-
-        <div class="art-card art-card-main">
-          <span class="art-line art-line-wide"></span>
-          <span class="art-line"></span>
-          <span class="art-line art-line-short"></span>
-
-          <div class="art-person">
-            <span class="person-head"></span>
-            <span class="person-body"></span>
-          </div>
-        </div>
-
-        <div class="art-card art-card-small">
-          <span class="art-dot"></span>
-          <span class="art-dot"></span>
-          <span class="art-dot"></span>
-        </div>
+      <div class="hero-map" aria-hidden="true">
+        <div class="map-axis axis-x"></div>
+        <div class="map-axis axis-y"></div>
+        <span class="point point-one"></span>
+        <span class="point point-two"></span>
+        <span class="point point-three"></span>
+        <p>notice</p>
+        <p>understand</p>
+        <p>choose</p>
       </div>
     </div>
   </section>
 
-  <section class="align-intro">
-    <div class="container align-intro-grid">
-      <div>
-        <p class="eyebrow">A place to think clearly</p>
-        <h2>Start with what feels hardest to sort through.</h2>
-      </div>
-
-      <div class="align-intro-copy">
+  <section class="signal-section">
+    <div class="container signal-layout">
+      <div class="signal-intro">
+        <p class="eyebrow">Start with the pattern</p>
+        <h2>You do not need the perfect label.</h2>
         <p>
-          You do not need to arrive with the right words or a perfectly defined
-          goal. Therapy can begin with the part of life that currently feels
-          confusing, heavy, repetitive, or difficult to manage.
+          Begin with what keeps taking up space: the reaction, conflict,
+          pressure, or distance that has become difficult to ignore.
         </p>
-
-        <p>
-          Together, the work can focus on understanding patterns, identifying
-          what is getting in the way, and finding practical ways to move toward
-          something different.
-        </p>
-
-        <a class="link-arrow" href="/about/">
-          Learn about Align Therapy Group
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="align-services">
-    <div class="container">
-      <div class="align-section-heading">
-        <div>
-          <p class="eyebrow">Areas of support</p>
-          <h2>Support for the parts of life that can feel difficult to carry alone.</h2>
-        </div>
-
-        <a class="align-outline-link" href="/services/">
-          View all services
-        </a>
       </div>
 
-      <div class="align-service-grid">
+      <div class="signal-list">
         {
-          homepageServices.slice(0, 6).map((service, index) => (
-            <a class="align-service-card" href={`/services/${service.slug}/`}>
-              <span class="service-index">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-
+          homepageServices.map((service, index) => (
+            <a href={service.href}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
               <div>
                 <h3>{service.title}</h3>
                 <p>{service.summary}</p>
               </div>
-
-              <span class="service-arrow">↗</span>
+              <b aria-hidden="true">↗</b>
             </a>
           ))
         }
@@ -128,736 +85,534 @@ import {
     </div>
   </section>
 
-  <section class="align-methods">
-    <div class="container align-methods-grid">
-      <div class="align-methods-panel">
-        <p class="eyebrow">How therapy can work</p>
-
-        <h2>
-          More than one way to understand what you are experiencing.
-        </h2>
-
+  <section class="process">
+    <div class="container">
+      <div class="process-heading">
+        <p class="eyebrow">A working process</p>
+        <h2>Therapy with a visible line of thought.</h2>
         <p>
-          Jordan may draw from several counseling approaches depending on the
-          focus of therapy, your preferences, and what seems useful in the work.
+          The process is responsive, but it does not have to feel vague.
+          Together, you can identify what is happening, understand its
+          function, and test what creates a different outcome.
         </p>
-
-        <a class="align-light-link" href="/approaches/">
-          Explore therapy approaches →
-        </a>
       </div>
 
-      <div class="align-method-list">
+      <ol class="process-grid">
+        <li>
+          <span>01</span>
+          <h3>Notice</h3>
+          <p>Name the sequence, including thoughts, emotions, body cues, and actions.</p>
+        </li>
+        <li>
+          <span>02</span>
+          <h3>Understand</h3>
+          <p>Explore what the response protects, predicts, or has learned to expect.</p>
+        </li>
+        <li>
+          <span>03</span>
+          <h3>Choose</h3>
+          <p>Practice responses that fit the present rather than repeating the past.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="methods">
+    <div class="container methods-grid">
+      <div class="methods-copy">
+        <p class="eyebrow">Methods, not formulas</p>
+        <h2>Use the approach that clarifies the work.</h2>
+        <p>
+          Jordan draws from more than one framework. The method should help
+          make your experience more understandable—not force it into somebody
+          else’s vocabulary.
+        </p>
+        <a href="/approaches/">View the approach map →</a>
+      </div>
+
+      <div class="method-list">
         <a href="/approaches/internal-family-systems/">
           <span>01</span>
           <strong>Internal Family Systems</strong>
+          <small>Parts, protection, and internal conflict</small>
         </a>
-
         <a href="/approaches/somatic-experiencing/">
           <span>02</span>
           <strong>Somatic Experiencing</strong>
+          <small>Body signals, activation, and regulation</small>
         </a>
-
-        <a href="/approaches/">
+        <a href="/approaches/#other-methods">
           <span>03</span>
-          <strong>Emotionally Focused Therapy</strong>
+          <strong>Emotion & attachment</strong>
+          <small>Needs, closeness, and relationship patterns</small>
         </a>
-
-        <a href="/approaches/">
+        <a href="/approaches/#other-methods">
           <span>04</span>
-          <strong>Mindfulness-Based Therapy</strong>
+          <strong>Present-moment awareness</strong>
+          <small>Attention before automatic reaction</small>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="align-clinician">
-    <div class="container align-clinician-grid">
-      <div class="clinician-visual">
-        <div class="clinician-block"></div>
-
-        <div class="clinician-card">
-          <div class="clinician-avatar">
-            <span></span>
-          </div>
-
-          <p>Jordan Ellis, LPC</p>
-          <small>Individual counseling for adults</small>
+  <section class="clinician">
+    <div class="container clinician-grid">
+      <div class="clinician-identity">
+        <div class="portrait" aria-hidden="true">
+          <span></span>
         </div>
+        <p>Jordan Ellis, LPC</p>
+        <small>Licensed Professional Counselor</small>
       </div>
 
       <div class="clinician-copy">
-        <p class="eyebrow">Meet Jordan</p>
-
-        <h2>A collaborative approach to understanding what needs attention.</h2>
-
+        <p class="eyebrow">The person in the room matters</p>
+        <h2>Direct enough to be useful. Curious enough to stay open.</h2>
         <p>
-          Jordan works with adults who may be navigating stress, anxiety,
-          relationships, grief, transitions, emotional disconnection, or
-          patterns that have become difficult to change on their own.
+          Jordan works with adults who want more than reassurance but less than
+          a rigid, one-size-fits-all process. Sessions make room for complexity
+          while staying connected to the question that brought you in.
         </p>
-
-        <p>
-          Sessions are designed to be thoughtful, practical, and responsive to
-          what each client needs from the process.
-        </p>
-
-        <a class="link-arrow" href="/about/jordan-ellis/">
-          Meet Jordan Ellis, LPC
-        </a>
+        <a href="/about/jordan-ellis/">Read Jordan’s approach →</a>
       </div>
     </div>
   </section>
 
-  <section class="align-steps">
+  <section class="facts">
     <div class="container">
-      <div class="align-section-heading">
-        <div>
-          <p class="eyebrow">Getting started</p>
-          <h2>A simple first step.</h2>
-        </div>
-      </div>
-
-      <div class="align-step-grid">
-        <div class="align-step">
-          <span>01</span>
-          <h3>Reach out</h3>
-          <p>
-            Request an appointment or contact the practice with a question.
-          </p>
-        </div>
-
-        <div class="align-step">
-          <span>02</span>
-          <h3>Connect</h3>
-          <p>
-            Review practical details and determine whether the practice may be a
-            good fit for what you are looking for.
-          </p>
-        </div>
-
-        <div class="align-step">
-          <span>03</span>
-          <h3>Begin</h3>
-          <p>
-            Meet with Jordan and start with the concerns that matter most to
-            you right now.
-          </p>
-        </div>
-      </div>
+      <p class="eyebrow">Practice snapshot</p>
+      <dl>
+        <div><dt>Format</dt><dd>Individual counseling</dd></div>
+        <div><dt>Clients</dt><dd>Adults</dd></div>
+        <div><dt>Location</dt><dd>Madison, Wisconsin</dd></div>
+        <div><dt>Starting point</dt><dd>A focused conversation</dd></div>
+      </dl>
     </div>
   </section>
 
-  <section class="align-location">
-    <div class="container align-location-grid">
+  <section class="cta">
+    <div class="container cta-grid">
       <div>
-        <p class="eyebrow">Madison, Wisconsin</p>
-        <h2>Individual counseling in a modern, welcoming setting.</h2>
+        <p class="eyebrow">Begin with a question</p>
+        <h2>Would this way of working fit what you need?</h2>
+      </div>
 
+      <div>
         <p>
-          Align Therapy Group is based in Madison and welcomes adults from
-          Madison and nearby communities.
+          Reach out to ask about availability, practical details, or whether
+          Jordan’s approach may fit the concern you want to address.
         </p>
+        <Button
+          href={appointmentUrl}
+          variant="light"
+          tracking="request-appointment"
+        >
+          Request an appointment
+        </Button>
       </div>
-
-      <div class="location-graphic" aria-hidden="true">
-        <span class="location-ring ring-one"></span>
-        <span class="location-ring ring-two"></span>
-        <span class="location-dot"></span>
-      </div>
-    </div>
-  </section>
-
-  <section class="align-cta">
-    <div class="container align-cta-inner">
-      <div>
-        <p class="eyebrow">A next step</p>
-        <h2>See whether Align Therapy Group may be a good fit.</h2>
-      </div>
-
-      <Button
-        href={appointmentUrl}
-        variant="light"
-        tracking="request-appointment"
-      >
-        Request an appointment
-      </Button>
     </div>
   </section>
 </Layout>
 
 <style>
-  .align-hero {
-    position: relative;
+  .hero,
+  .signal-section,
+  .process,
+  .methods,
+  .clinician,
+  .facts,
+  .cta {
+    padding: clamp(4rem,8vw,7rem) 0;
+  }
+
+  .hero {
     overflow: hidden;
-    padding: clamp(4.5rem, 9vw, 8rem) 0;
     background:
-      linear-gradient(135deg, #f6f9fd 0%, #eaf2fb 100%);
+      linear-gradient(120deg,#f8fbff 0%,#e8f1fb 100%);
   }
 
-  .align-hero:before {
-    content: "";
-    position: absolute;
-    width: 32rem;
-    height: 32rem;
-    right: -11rem;
-    top: -13rem;
-    border-radius: 50%;
-    background: rgba(48, 105, 190, .08);
-  }
-
-  .align-hero-grid {
+  .hero-grid {
     display: grid;
-    gap: 3rem;
-    align-items: center;
+    gap: 2.5rem;
   }
 
-  .align-hero-copy {
-    position: relative;
-    z-index: 2;
-    max-width: 47rem;
+  .hero-code {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-top: .75rem;
+    border-top: 3px solid #5f82ad;
+    color: #5f82ad;
   }
 
-  .align-hero h1 {
-    max-width: 11ch;
-    font-size: clamp(3rem, 7vw, 6.3rem);
+  .hero-code span {
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .12em;
   }
 
-  .align-hero h1 span {
+  .hero-code strong {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .hero-copy h1 {
+    max-width: 13ch;
+    font-size: clamp(3.15rem,7vw,6.5rem);
+    line-height: .96;
+  }
+
+  .hero-copy h1 span {
     display: block;
     color: #5f82ad;
   }
 
-  .align-lead {
-    max-width: 42rem;
-    margin-top: 1.5rem;
-    color: #42546b;
-    font-size: clamp(1.08rem, 1.6vw, 1.3rem);
+  .lead {
+    max-width: 43rem;
+    margin-top: 1.6rem;
+    font-size: clamp(1.08rem,1.7vw,1.3rem);
   }
 
-  .align-actions {
+  .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: .85rem;
+    gap: 1rem 1.5rem;
+    align-items: center;
     margin-top: 2rem;
   }
 
-  .align-secondary {
-    display: inline-flex;
-    min-height: 3rem;
-    align-items: center;
-    padding: .72rem 1.1rem;
-    border: 1px solid #3f648d;
-    border-radius: .55rem;
+  .hero-actions > a:not(.button),
+  .methods-copy a,
+  .clinician-copy a {
     color: #3f648d;
     font-weight: 750;
     text-decoration: none;
   }
 
-  .align-art {
+  .hero-map {
     position: relative;
-    min-height: 29rem;
+    min-height: 21rem;
+    border: 1px solid #bacde2;
+    background:
+      linear-gradient(rgba(95,130,173,.1) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(95,130,173,.1) 1px,transparent 1px);
+    background-size: 2.5rem 2.5rem;
   }
 
-  .shape {
+  .map-axis {
     position: absolute;
+    background: #7899bd;
   }
 
-  .shape-a {
-    width: 18rem;
-    height: 18rem;
-    right: 2rem;
-    top: 1rem;
-    border-radius: 3rem;
-    background: #5f82ad;
-    transform: rotate(10deg);
+  .axis-x {
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    height: 2px;
   }
 
-  .shape-b {
-    width: 15rem;
-    height: 15rem;
-    right: 10rem;
-    bottom: 0;
+  .axis-y {
+    top: 8%;
+    bottom: 8%;
+    left: 50%;
+    width: 2px;
+  }
+
+  .point {
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 3px solid white;
     border-radius: 50%;
-    background: #d7e6f7;
+    background: #3f648d;
+    box-shadow: 0 0 0 1px #3f648d;
   }
 
-  .shape-c {
-    width: 8rem;
-    height: 8rem;
-    right: 0;
-    bottom: 3rem;
-    border-radius: 1.2rem;
-    background: #a9bed6;
-    transform: rotate(-12deg);
-  }
+  .point-one { left: 18%; top: 61%; }
+  .point-two { left: 47%; top: 37%; }
+  .point-three { right: 16%; top: 20%; }
 
-  .art-card {
+  .hero-map p {
     position: absolute;
-    border: 1px solid rgba(11,29,58,.12);
-    background: rgba(255,255,255,.94);
-    box-shadow: 0 22px 50px rgba(11,29,58,.14);
+    margin: 0;
+    color: #496b91;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
   }
 
-  .art-card-main {
-    width: min(21rem, 80%);
-    min-height: 19rem;
-    left: 1rem;
-    top: 3rem;
-    padding: 1.6rem;
-    border-radius: 1rem;
+  .hero-map p:nth-of-type(1) { left: 8%; bottom: 10%; }
+  .hero-map p:nth-of-type(2) { left: 43%; top: 22%; }
+  .hero-map p:nth-of-type(3) { right: 7%; top: 7%; }
+
+  .signal-section {
+    background: white;
   }
 
-  .art-card-small {
-    display: flex;
-    gap: .45rem;
-    right: 1rem;
-    top: 13rem;
-    padding: .8rem 1rem;
-    border-radius: .7rem;
+  .signal-layout,
+  .methods-grid,
+  .clinician-grid,
+  .cta-grid {
+    display: grid;
+    gap: 3rem;
   }
 
-  .art-line {
-    display: block;
-    width: 62%;
-    height: .75rem;
-    margin-bottom: .7rem;
-    border-radius: .3rem;
-    background: #dce7f4;
+  .signal-intro {
+    max-width: 32rem;
   }
 
-  .art-line-wide {
-    width: 88%;
-    background: #aec5e1;
+  .signal-list {
+    display: grid;
+    border-top: 1px solid var(--sand);
   }
 
-  .art-line-short {
-    width: 45%;
+  .signal-list a {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    gap: 1rem;
+    align-items: start;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--sand);
+    color: var(--body);
+    text-decoration: none;
+    transition: padding .18s ease,background .18s ease;
   }
 
-  .art-dot {
-    width: .65rem;
-    height: .65rem;
-    border-radius: 50%;
-    background: #7793b3;
+  .signal-list a:hover {
+    padding-inline: 1rem;
+    background: #edf4fb;
   }
 
-  .art-person {
+  .signal-list span {
+    color: #5f82ad;
+    font-size: .7rem;
+    font-weight: 800;
+  }
+
+  .signal-list h3 {
+    margin-bottom: .25rem;
+  }
+
+  .signal-list p {
+    font-size: .92rem;
+  }
+
+  .signal-list b {
+    color: #3f648d;
+  }
+
+  .process {
+    background: #edf4fb;
+  }
+
+  .process-heading {
+    max-width: 48rem;
+  }
+
+  .process-grid {
+    display: grid;
+    gap: 1px;
+    margin: 3rem 0 0;
+    padding: 1px;
+    background: #bfcfe0;
+    list-style: none;
+  }
+
+  .process-grid li {
+    padding: 1.5rem;
+    background: #f8fbff;
+  }
+
+  .process-grid span,
+  .method-list span {
+    color: #5f82ad;
+    font-size: .7rem;
+    font-weight: 800;
+  }
+
+  .process-grid h3 {
+    margin-top: 2.5rem;
+  }
+
+  .methods {
+    background: #0b1d3a;
+    color: #dbe7f3;
+  }
+
+  .methods h2 {
+    color: white;
+  }
+
+  .methods .eyebrow {
+    color: #b5c8df;
+  }
+
+  .methods-copy a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: white;
+  }
+
+  .method-list {
+    display: grid;
+    border-top: 1px solid rgba(255,255,255,.2);
+  }
+
+  .method-list a {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: .25rem 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    color: white;
+    text-decoration: none;
+  }
+
+  .method-list strong {
+    font-size: .95rem;
+  }
+
+  .method-list small {
+    grid-column: 2;
+    color: #aebed0;
+  }
+
+  .clinician {
+    background: white;
+  }
+
+  .clinician-identity {
+    align-self: start;
+  }
+
+  .portrait {
+    position: relative;
+    width: min(100%,24rem);
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background:
+      linear-gradient(145deg,#dce9f7,#7793b3);
+  }
+
+  .portrait:before {
+    content: "";
     position: absolute;
-    right: 1.8rem;
-    bottom: 1.6rem;
-    width: 7rem;
-    height: 8rem;
-  }
-
-  .person-head {
-    position: absolute;
-    left: 2.2rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 30%;
+    aspect-ratio: 1;
+    left: 35%;
+    top: 22%;
     border-radius: 50%;
     background: #3f648d;
   }
 
-  .person-body {
+  .portrait span {
     position: absolute;
-    left: .8rem;
-    bottom: 0;
-    width: 5.4rem;
-    height: 5.7rem;
-    border-radius: 2.8rem 2.8rem .8rem .8rem;
+    width: 68%;
+    height: 48%;
+    left: 16%;
+    bottom: -4%;
+    border-radius: 48% 48% 0 0;
     background: #a9bed6;
   }
 
-  .align-intro,
-  .align-clinician,
-  .align-steps,
-  .align-location {
-    padding: clamp(4rem, 8vw, 7rem) 0;
+  .clinician-identity > p {
+    margin: 1rem 0 0;
+    color: var(--ink);
+    font-weight: 800;
   }
 
-  .align-intro-grid,
-  .align-clinician-grid,
-  .align-location-grid {
-    display: grid;
-    gap: 2.5rem;
+  .clinician-identity small {
+    color: var(--muted);
   }
 
-  .align-intro-copy p + p,
-  .clinician-copy p + p {
-    margin-top: 1rem;
-  }
-
-  .align-intro-copy .link-arrow,
-  .clinician-copy .link-arrow {
-    display: inline-block;
-    margin-top: 1.2rem;
-  }
-
-  .align-services {
-    padding: clamp(4rem, 8vw, 7rem) 0;
-    background: #edf4fb;
-  }
-
-  .align-section-heading {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: end;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .align-section-heading > div {
+  .clinician-copy {
+    align-self: center;
     max-width: 47rem;
   }
 
-  .align-outline-link {
-    color: #3f648d;
-    font-weight: 750;
-    text-decoration: none;
-  }
-
-  .align-service-grid {
-    display: grid;
-    gap: .75rem;
-  }
-
-  .align-service-card {
-    display: grid;
-    grid-template-columns: 2.5rem 1fr auto;
-    gap: 1rem;
-    align-items: center;
-    padding: 1.25rem;
-    border: 1px solid #d3dfed;
-    border-radius: .7rem;
-    background: white;
-    color: #42546b;
-    text-decoration: none;
-    transition:
-      transform .18s ease,
-      border-color .18s ease,
-      box-shadow .18s ease;
-  }
-
-  .align-service-card:hover {
-    border-color: #a9bed6;
-    box-shadow: 0 12px 30px rgba(11,29,58,.08);
-    transform: translateY(-2px);
-  }
-
-  .align-service-card h3 {
-    margin-bottom: .25rem;
-  }
-
-  .service-index {
-    color: #5f82ad;
-    font-size: .75rem;
-    font-weight: 800;
-  }
-
-  .service-arrow {
-    color: #3f648d;
-    font-size: 1.2rem;
-  }
-
-  .align-methods {
-    padding: clamp(4rem, 8vw, 7rem) 0;
-    background: #0b1d3a;
-    color: #dfe9f5;
-  }
-
-  .align-methods-grid {
-    display: grid;
-    gap: 2.5rem;
-  }
-
-  .align-methods h2 {
-    color: white;
-  }
-
-  .align-methods .eyebrow {
-    color: #b5c8df;
-  }
-
-  .align-methods-panel p:not(.eyebrow) {
-    max-width: 38rem;
-    margin-top: 1rem;
-  }
-
-  .align-light-link {
-    display: inline-block;
-    margin-top: 1.5rem;
-    color: white;
-    font-weight: 750;
-    text-decoration: none;
-  }
-
-  .align-method-list {
-    border-top: 1px solid rgba(255,255,255,.16);
-  }
-
-  .align-method-list a {
-    display: grid;
-    grid-template-columns: 3rem 1fr;
-    gap: 1rem;
-    padding: 1.2rem 0;
-    border-bottom: 1px solid rgba(255,255,255,.16);
-    color: white;
-    text-decoration: none;
-  }
-
-  .align-method-list span {
-    color: #abc1da;
-    font-size: .75rem;
-    font-weight: 800;
-  }
-
-  .clinician-visual {
-    position: relative;
-    min-height: 27rem;
-  }
-
-  .clinician-block {
-    position: absolute;
-    inset: 2rem 4rem 0 0;
-    border-radius: 1.5rem;
-    background:
-      linear-gradient(135deg, #5f82ad, #3f648d);
-  }
-
-  .clinician-card {
-    position: absolute;
-    right: 0;
-    bottom: 1rem;
-    width: min(20rem, 85%);
-    padding: 1.5rem;
-    border-radius: 1rem;
-    background: white;
-    box-shadow: 0 20px 50px rgba(11,29,58,.16);
-  }
-
-  .clinician-avatar {
-    position: relative;
-    width: 6rem;
-    height: 6rem;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    border-radius: .7rem;
-    background: #dce7f4;
-  }
-
-  .clinician-avatar:before {
-    content: "";
-    position: absolute;
-    width: 2.4rem;
-    height: 2.4rem;
-    left: 1.8rem;
-    top: .8rem;
-    border-radius: 50%;
-    background: #7793b3;
-  }
-
-  .clinician-avatar span {
-    position: absolute;
-    width: 5rem;
-    height: 3.6rem;
-    left: .5rem;
-    bottom: -.3rem;
-    border-radius: 2.8rem 2.8rem .7rem .7rem;
-    background: #a9bed6;
-  }
-
-  .clinician-card p {
-    color: #0b1d3a;
-    font-weight: 800;
-  }
-
-  .clinician-card small {
-    color: #6b7d93;
-  }
-
-  .align-step-grid {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .align-step {
-    padding: 1.5rem;
-    border-left: 4px solid #5f82ad;
-    background: #f3f7fc;
-  }
-
-  .align-step > span {
-    color: #5f82ad;
-    font-size: .75rem;
-    font-weight: 800;
-  }
-
-  .align-step h3 {
-    margin-top: .6rem;
-  }
-
-  .align-step p {
-    margin-top: .5rem;
-  }
-
-  .align-location {
+  .facts {
     background: #edf4fb;
   }
 
-  .location-graphic {
-    position: relative;
-    min-height: 18rem;
+  .facts dl {
+    display: grid;
+    gap: 1px;
+    margin: 2rem 0 0;
+    background: #bfcfe0;
   }
 
-  .location-ring {
-    position: absolute;
-    border: 1px solid #7fa2ce;
-    border-radius: 50%;
+  .facts dl div {
+    padding: 1.25rem;
+    background: #f8fbff;
   }
 
-  .ring-one {
-    width: 13rem;
-    height: 13rem;
-    right: 4rem;
-    top: 2rem;
+  .facts dt {
+    color: #5f82ad;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
   }
 
-  .ring-two {
-    width: 8rem;
-    height: 8rem;
-    right: 1rem;
-    top: 7rem;
+  .facts dd {
+    margin: .45rem 0 0;
+    color: var(--ink);
+    font-weight: 750;
   }
 
-  .location-dot {
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    right: 7rem;
-    top: 7rem;
-    border-radius: 50%;
-    background: #5f82ad;
-    box-shadow: 0 0 0 1.2rem rgba(29,78,216,.12);
-  }
-
-  .align-cta {
-    padding: clamp(4rem, 8vw, 6rem) 0;
+  .cta {
     background: #294c70;
-    color: #dfe9f5;
+    color: #dbe7f3;
   }
 
-  .align-cta-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: end;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
-  .align-cta h2 {
-    max-width: 18ch;
+  .cta h2 {
     color: white;
   }
 
-  .align-cta .eyebrow {
+  .cta .eyebrow {
     color: #bfd0e3;
   }
 
-  @media (min-width: 48rem) {
-    .align-hero-grid {
-      grid-template-columns: 1.05fr .95fr;
-      gap: clamp(3rem, 7vw, 7rem);
+  .cta .button {
+    margin-top: 1rem;
+  }
+
+  @media (min-width:48rem) {
+    .hero-grid {
+      grid-template-columns: 8rem minmax(0,1fr);
+      gap: clamp(3rem,6vw,6rem);
     }
 
-    .align-intro-grid,
-    .align-clinician-grid,
-    .align-location-grid {
-      grid-template-columns: .9fr 1.1fr;
-      gap: clamp(3rem, 7vw, 7rem);
-      align-items: center;
+    .hero-map {
+      grid-column: 2;
     }
 
-    .align-methods-grid {
-      grid-template-columns: .9fr 1.1fr;
-      gap: clamp(3rem, 7vw, 7rem);
-      align-items: start;
+    .signal-layout,
+    .methods-grid,
+    .clinician-grid,
+    .cta-grid {
+      grid-template-columns: .8fr 1.2fr;
+      gap: clamp(3rem,7vw,7rem);
     }
 
-    .align-service-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .process-grid {
+      grid-template-columns: repeat(3,1fr);
     }
 
-    .align-step-grid {
-      grid-template-columns: repeat(3, 1fr);
+    .facts dl {
+      grid-template-columns: repeat(4,1fr);
     }
   }
 
-  @media (max-width: 47.999rem) {
-    .align-hero {
-      padding-top: 3.75rem;
+  @media (min-width:75rem) {
+    .hero-grid {
+      grid-template-columns: 8rem minmax(0,1fr) minmax(20rem,.75fr);
+      align-items: center;
     }
 
-    .align-art {
-      min-height: 23rem;
-    }
-
-    .shape-a {
-      width: 14rem;
-      height: 14rem;
-      right: .5rem;
-    }
-
-    .shape-b {
-      width: 11rem;
-      height: 11rem;
-      right: 7rem;
-    }
-
-    .shape-c {
-      width: 6rem;
-      height: 6rem;
-    }
-
-    .art-card-main {
-      width: 78%;
-      min-height: 15rem;
-      left: .25rem;
-    }
-
-    .align-actions {
-      display: grid;
-    }
-
-    .align-actions > * {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .align-section-heading {
-      align-items: start;
-    }
-
-    .align-service-card {
-      grid-template-columns: 2rem 1fr auto;
-      padding: 1rem;
-    }
-
-    .align-service-card p {
-      font-size: .9rem;
-    }
-
-    .clinician-visual {
-      min-height: 22rem;
-    }
-
-    .clinician-block {
-      inset: 1rem 3rem 0 0;
-    }
-
-    .location-graphic {
-      min-height: 13rem;
+    .hero-map {
+      grid-column: auto;
     }
   }
 </style>
