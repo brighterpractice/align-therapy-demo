@@ -10,8 +10,20 @@ import { breadcrumbSchema, pageSchema } from '../lib/schema';
 
 interface Props { service: Service; content: ServicePageContent }
 const { service, content } = Astro.props;
-const related = content.related?.map((item) => ({ ...item, service: services.find((candidate) => candidate.slug === item.slug) })).filter((item) => item.service?.published);
-const approachLinks = content.approachLinks ?? [];
+const related = content.related
+  ?.map((item) => ({
+    ...item,
+    service: services.find((candidate) => candidate.slug === item.slug),
+  }))
+  .filter((item) => item.service?.published && item.service?.hasDetailPage);
+const allowedApproachHrefs = new Set([
+  '/approaches/',
+  '/approaches/internal-family-systems/',
+  '/approaches/somatic-experiencing/',
+]);
+const approachLinks = (content.approachLinks ?? []).filter((item) =>
+  allowedApproachHrefs.has(item.href)
+);
 const crumbs = [{ label: 'Services', href: '/services/' }, { label: service.title }];
 ---
 <Layout title={content.title} description={content.description} schema={pageSchema([breadcrumbSchema(crumbs, Astro.url.pathname)])}>
