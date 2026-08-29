@@ -15,6 +15,7 @@ export const navigation = [
       { label: 'Individual Therapy', href: '/services/individual-therapy/' },
       { label: 'Trauma & Difficult Experiences', href: '/services/trauma-ptsd/' },
       { label: 'Anxiety & Stress', href: '/services/anxiety-stress/' },
+      { label: 'Grief & Loss', href: '/services/grief-loss/' },
       {
         label: 'Depression & Emotional Disconnection',
         href: '/services/depression-emotional-disconnection/',
