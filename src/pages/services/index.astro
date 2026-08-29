@@ -5,12 +5,7 @@ import { services } from '../../data/services';
 import { breadcrumbSchema, pageSchema } from '../../lib/schema';
 
 const crumbs = [{ label: 'Services' }];
-
-const publishedServices = services.filter(
- (service) =>
- service.published &&
- service.published
-);
+const publishedServices = services.filter((service) => service.published);
 ---
 
 <Layout
@@ -21,7 +16,7 @@ const publishedServices = services.filter(
  <PageHero
  eyebrow="Individual counseling for adults"
  title="Support for what may be bringing you to therapy."
- intro="The concerns that lead someone to counseling do not always fit neatly into one category. These pages describe several common areas Jordan works with."
+ intro="The concerns that lead someone to counseling do not always fit neatly into one category. Some areas are explored in greater depth, while others are summarized here so you can get a clear sense of the support Jordan offers."
  crumbs={crumbs}
  />
 
@@ -40,9 +35,9 @@ const publishedServices = services.filter(
  </p>
 
  <p>
- The service pages below describe common reasons adults may seek
- support. They are not meant to require you to choose a diagnosis or
- place yourself into one category.
+ You do not have to choose the perfect category before reaching out.
+ These areas can overlap, and therapy can begin with whatever feels most
+ important or difficult right now.
  </p>
 
  <a class="link-arrow" href="/services/individual-therapy/">
@@ -59,17 +54,26 @@ const publishedServices = services.filter(
 
  <div class="areas">
  {
- publishedServices.map((service) => (
+ publishedServices.map((service) =>
+ service.hasDetailPage ? (
  <a
  class="service-card service-link card"
  href={service.href}
  aria-label={`Learn more about ${service.title}`}
  data-track={`service-${service.slug}`}
  >
+ <span class="detail-label">Learn more</span>
  <h3>{service.title}</h3>
  <p>{service.description}</p>
+ <span class="learn">Explore this area →</span>
  </a>
- ))
+ ) : (
+ <article class="service-card card">
+ <h3>{service.title}</h3>
+ <p>{service.description}</p>
+ </article>
+ )
+ )
  }
  </div>
  </div>
@@ -86,9 +90,8 @@ const publishedServices = services.filter(
  <p>
  Services describe concerns such as trauma, anxiety, grief, chronic
  pain or illness, relationship difficulties, or life transitions.
- Approaches describe
- methods Jordan may use during counseling, such as, IFS, somatic
- work, EFT, or mindfulness.
+ Approaches describe methods Jordan may use during counseling, such as
+ IFS, somatic work, EFT, or mindfulness.
  </p>
 
  <p>
@@ -109,7 +112,7 @@ const publishedServices = services.filter(
  <h2>You can start without having the right label.</h2>
 
  <p>
- Experiences often overlap. If several pages sound familiar—or none of
+ Experiences often overlap. If several areas sound familiar—or none of
  them describe your situation exactly—that does not prevent you from
  reaching out.
  </p>
@@ -147,6 +150,24 @@ const publishedServices = services.filter(
 
  .service-card p{
  font-size:.95rem
+ }
+
+ .detail-label{
+ display:block;
+ margin-bottom:.55rem;
+ color:var(--sage-dark);
+ font-size:.68rem;
+ font-weight:800;
+ letter-spacing:.08em;
+ text-transform:uppercase
+ }
+
+ .learn{
+ display:inline-block;
+ margin-top:.6rem;
+ color:var(--sage-dark);
+ font-size:.86rem;
+ font-weight:750
  }
 
  @media(hover:hover){

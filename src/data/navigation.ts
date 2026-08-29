@@ -20,22 +20,8 @@ export const navigation = [
         label: 'Depression & Emotional Disconnection',
         href: '/services/depression-emotional-disconnection/',
       },
-      {
-        label: 'Chronic Pain & Illness',
-        href: '/services/chronic-pain-chronic-illness/',
-      },
-      {
-        label: 'Life Transitions',
-        href: '/services/life-transitions/',
-      },
-      {
-        label: 'Relationship Concerns',
-        href: '/services/relationship-concerns/',
-      },
-      {
-        label: 'Self-Esteem & Personal Growth',
-        href: '/services/self-esteem-personal-growth/',
-      },
+      { label: 'Life Transitions', href: '/services/life-transitions/' },
+      { label: 'Relationship Concerns', href: '/services/relationship-concerns/' },
     ],
   },
   {
@@ -50,14 +36,6 @@ export const navigation = [
       {
         label: 'Somatic Experiencing',
         href: '/approaches/somatic-experiencing/',
-      },
-      {
-        label: 'Emotionally Focused Therapy',
-        href: '/approaches/emotionally-focused-therapy/',
-      },
-      {
-        label: 'Mindfulness-Based Therapy',
-        href: '/approaches/mindfulness-based-therapy/',
       },
     ],
   },

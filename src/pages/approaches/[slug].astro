@@ -2,11 +2,16 @@
 import ApproachPage from '../../components/ApproachPage.astro';
 import { approaches, type Approach } from '../../data/approaches';
 
+const detailApproachSlugs = new Set([
+  'internal-family-systems',
+  'somatic-experiencing',
+]);
+
 export function getStaticPaths() {
   return approaches
     .filter((approach) =>
       typeof approach.slug === 'string' &&
-      approach.slug.length > 0
+      detailApproachSlugs.has(approach.slug)
     )
     .map((approach) => ({
       params: { slug: approach.slug },
