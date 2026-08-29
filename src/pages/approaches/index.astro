@@ -28,7 +28,7 @@ const overviewApproaches = validApproaches.filter(
  <PageHero
  eyebrow="How therapy may take shape"
  title="Therapy approaches Jordan may draw from."
- intro="Align’s mid-size site gives two approaches dedicated educational pages and explains additional methods here on the overview."
+ intro="Different approaches offer different ways to understand experiences, emotions, patterns, and responses. Some methods are explored in more depth, while others are summarized here."
  crumbs={crumbs}
  />
 
@@ -47,9 +47,9 @@ const overviewApproaches = validApproaches.filter(
  </p>
 
  <p>
- This overview explains the larger toolkit, while the dedicated IFS and
- Somatic Experiencing pages provide additional depth for visitors who
- want to understand those methods more fully.
+ Learning about these methods can help you understand what the work may
+ involve and give you language for asking questions about what feels
+ useful or comfortable.
  </p>
  </div>
  </div>
@@ -57,8 +57,8 @@ const overviewApproaches = validApproaches.filter(
 
  <section class="section section--tint">
  <div class="container">
- <p class="eyebrow">Featured approaches</p>
- <h2>Explore two methods in greater depth.</h2>
+ <p class="eyebrow">Explore in greater depth</p>
+ <h2>Two approaches Jordan may use regularly.</h2>
 
  <div class="approach-grid">
  {
@@ -68,10 +68,10 @@ const overviewApproaches = validApproaches.filter(
  href={approach.href}
  data-track={`approach-${approach.slug}`}
  >
- <span class="detail-label">Dedicated approach page</span>
+ <span class="detail-label">Learn more</span>
  <h3>{approach.title}</h3>
  <p>{approach.cardDescription}</p>
- <span class="learn">Learn more →</span>
+ <span class="learn">Explore this approach →</span>
  </a>
  ))
  }
@@ -84,16 +84,14 @@ const overviewApproaches = validApproaches.filter(
  <p class="eyebrow">Additional methods</p>
  <h2>Other approaches can still be part of the work.</h2>
  <p class="measure methods-intro">
- A mid-size site does not need a separate page for every modality. These
- methods remain visible and explained here while keeping the navigation
- focused on the most important detail pages.
+ Jordan may also draw from these methods depending on the concern being
+ discussed, your preferences, and what seems useful as therapy develops.
  </p>
 
  <div class="approach-grid secondary-grid">
  {
  overviewApproaches.map((approach) => (
  <article class="card overview-card">
- <span class="overview-label">Included on this overview</span>
  <h3>{approach.title}</h3>
  <p>{approach.cardDescription}</p>
  </article>
@@ -160,18 +158,16 @@ const overviewApproaches = validApproaches.filter(
  font-weight:750
  }
 
- .detail-label,
- .overview-label{
+ .detail-label{
  display:block;
  margin-bottom:.55rem;
+ color:var(--sage-dark);
  font-size:.68rem;
  font-weight:800;
  letter-spacing:.08em;
  text-transform:uppercase
  }
 
- .detail-label{color:var(--sage-dark)}
- .overview-label{color:var(--muted)}
  .methods-intro{margin-top:1rem}
  .overview-card{padding:1.25rem}
 
