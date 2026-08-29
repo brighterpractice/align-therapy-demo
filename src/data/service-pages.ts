@@ -33,7 +33,7 @@ export const servicePages: Record<string, ServicePageContent> = {
       
       { href: '/approaches/internal-family-systems/', label: 'Internal Family Systems (IFS)' },
       { href: '/approaches/somatic-experiencing/', label: 'Somatic & body-informed approaches' },
-      { href: '/approaches/mindfulness-based-therapy/', label: 'Mindfulness' },
+      { href: '/approaches/', label: 'Mindfulness' },
     ],
   },
   'trauma-ptsd': {
@@ -51,7 +51,7 @@ export const servicePages: Record<string, ServicePageContent> = {
       
       { href: '/approaches/internal-family-systems/', label: 'Internal Family Systems (IFS)' },
       { href: '/approaches/somatic-experiencing/', label: 'Somatic & body-informed approaches' },
-      { href: '/approaches/mindfulness-based-therapy/', label: 'Mindfulness' },
+      { href: '/approaches/', label: 'Mindfulness' },
     ],
   },
     'anxiety-stress': {
@@ -67,7 +67,7 @@ export const servicePages: Record<string, ServicePageContent> = {
     related: [{ slug: 'individual-therapy', label: 'Learn more about individual therapy' }],
     approachLinks: [
       { href: '/approaches/somatic-experiencing/', label: 'Somatic & body-informed approaches' },
-      { href: '/approaches/mindfulness-based-therapy/', label: 'Mindfulness' },
+      { href: '/approaches/', label: 'Mindfulness' },
     ],
   },
   'grief-loss': {
@@ -82,7 +82,7 @@ export const servicePages: Record<string, ServicePageContent> = {
     approach: ['Counseling does not require you to move through grief in a particular order or on a particular schedule. The work can focus on what feels most difficult now and how the loss is affecting everyday life.', 'Mindfulness, body awareness, or spiritual resources may also be incorporated when they are useful to you. Spirituality is always optional and guided by your own beliefs.'],
     related: [{ slug: 'life-transitions', label: 'Explore support for life transitions' }],
     approachLinks: [
-      { href: '/approaches/mindfulness-based-therapy/', label: 'Mindfulness' },
+      { href: '/approaches/', label: 'Mindfulness' },
     ],
   },
   'depression-emotional-disconnection': {
@@ -181,7 +181,7 @@ export const servicePages: Record<string, ServicePageContent> = {
     approachLinks: [
       { href: '/approaches/internal-family-systems/', label: 'Internal Family Systems (IFS)' },
       { href: '/approaches/somatic-experiencing/', label: 'Somatic & body-informed approaches' },
-      { href: '/approaches/mindfulness-based-therapy/', label: 'Mindfulness' },
+      { href: '/approaches/', label: 'Mindfulness' },
     ],
   },
 };

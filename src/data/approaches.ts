@@ -79,7 +79,7 @@ export const approaches: Approach[] = [
  related: [
  { label: 'Trauma & PTSD', href: '/services/trauma-ptsd/' },
  { label: 'Relationship Concerns', href: '/services/relationship-concerns/' },
- { label: 'Self-Esteem & Personal Growth', href: '/services/self-esteem-personal-growth/' },
+ { label: 'Self-Esteem & Personal Growth', href: '/services/' },
  ],
  },
 
@@ -123,7 +123,7 @@ export const approaches: Approach[] = [
  title: 'Emotionally Focused Therapy (EFT) for Individuals',
  seoTitle: 'EFT for Individuals in Madison, WI',
  shortTitle: 'EFT',
- href: '/approaches/emotionally-focused-therapy/',
+ href: '/approaches/',
  description:
  'Learn how Jordan Ellis may use Emotionally Focused Therapy principles in individual counseling for adults in Madison, Wisconsin.',
  cardDescription:
@@ -158,7 +158,7 @@ export const approaches: Approach[] = [
  title: 'Mindfulness-Informed Therapy',
  seoTitle: 'Mindfulness-Informed Therapy | Madison, WI',
  shortTitle: 'Mindfulness',
- href: '/approaches/mindfulness-based-therapy/',
+ href: '/approaches/',
  description:
  'Learn how Jordan Ellis may incorporate mindfulness, meditation experience, and body awareness into individual counseling in Madison, Wisconsin.',
  cardDescription:
@@ -184,7 +184,7 @@ export const approaches: Approach[] = [
  related: [
  { label: 'Anxiety & Stress', href: '/services/anxiety-stress/' },
  { label: 'Grief & Loss', href: '/services/grief-loss/' },
- { label: 'Self-Esteem & Personal Growth', href: '/services/self-esteem-personal-growth/' },
+ { label: 'Self-Esteem & Personal Growth', href: '/services/' },
  ],
  },
 ];
