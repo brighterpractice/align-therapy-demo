@@ -16,7 +16,7 @@ const publishedServices = services.filter((service) => service.published);
  <PageHero
  eyebrow="Individual counseling for adults"
  title="Support for what may be bringing you to therapy."
- intro="Align offers a broader mid-size website structure with dedicated pages for several common concerns while still keeping some topics consolidated into a single services overview."
+ intro="The concerns that lead someone to counseling do not always fit neatly into one category. Some areas are explored in greater depth, while others are summarized here so you can get a clear sense of the support Jordan offers."
  crumbs={crumbs}
  />
 
@@ -35,9 +35,9 @@ const publishedServices = services.filter((service) => service.published);
  </p>
 
  <p>
- Align includes several focused service pages for concerns that benefit
- from additional detail, while related concerns remain clearly described
- here so the overall site stays useful without becoming unnecessarily large.
+ You do not have to choose the perfect category before reaching out.
+ These areas can overlap, and therapy can begin with whatever feels most
+ important or difficult right now.
  </p>
 
  <a class="link-arrow" href="/services/individual-therapy/">
@@ -62,14 +62,13 @@ const publishedServices = services.filter((service) => service.published);
  aria-label={`Learn more about ${service.title}`}
  data-track={`service-${service.slug}`}
  >
- <span class="detail-label">Dedicated service page</span>
+ <span class="detail-label">Learn more</span>
  <h3>{service.title}</h3>
  <p>{service.description}</p>
- <span class="learn">Learn more →</span>
+ <span class="learn">Explore this area →</span>
  </a>
  ) : (
  <article class="service-card card">
- <span class="overview-label">Included on this overview</span>
  <h3>{service.title}</h3>
  <p>{service.description}</p>
  </article>
@@ -96,10 +95,8 @@ const publishedServices = services.filter((service) => service.published);
  </p>
 
  <p>
- The Align demo gives two approaches their own detail pages while
- explaining the others on the broader approaches page. That keeps the
- site more focused while still showing a deeper information structure
- than a starter practice website.
+ A single concern may be explored in more than one way, and the
+ approach can change as counseling develops.
  </p>
 
  <a class="link-arrow" href="/approaches/">
@@ -155,18 +152,15 @@ const publishedServices = services.filter((service) => service.published);
  font-size:.95rem
  }
 
- .detail-label,
- .overview-label{
+ .detail-label{
  display:block;
  margin-bottom:.55rem;
+ color:var(--sage-dark);
  font-size:.68rem;
  font-weight:800;
  letter-spacing:.08em;
  text-transform:uppercase
  }
-
- .detail-label{color:var(--sage-dark)}
- .overview-label{color:var(--muted)}
 
  .learn{
  display:inline-block;
